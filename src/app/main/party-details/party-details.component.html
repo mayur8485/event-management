@@ -21,7 +21,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let party of partiesPagination; let i = index">
-        <th scope="row" style="max-width: 10px;">{{i+1}}</th>
+        <th scope="row" style="max-width: 10px;">{{startIndex + i+1}}</th>
         <td style="max-width: 50px;">{{party.fullName}}</td>
         <td style="max-width: 80px;">{{party.address}}</td>
         <td style="max-width: 50px;">{{party.mobileNo}}</td>

@@ -16,6 +16,7 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
   page: number = 0;
   noOfPages: any = [];
   recordsPerPage: number = 5;
+  startIndex: number = 0;
 
   constructor(private dataStoreService: DatastoreService) { };
 
@@ -32,6 +33,7 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
     this.noOfPages = Array.from({ length: Math.ceil(this.parties.length / this.recordsPerPage) }, (_, index) => index + 1);
     let startIndex = ((page - 1) * this.recordsPerPage);
     let endIndex = startIndex + this.recordsPerPage;
+    this.startIndex = startIndex;
     this.partiesPagination = this.parties.slice(startIndex, endIndex)
   }
 

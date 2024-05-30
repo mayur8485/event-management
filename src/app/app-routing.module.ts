@@ -23,17 +23,17 @@ const appRoutes: Routes = [
         canActivate: [AuthGuard]
     },
     {
-        path: 'party',
+        path: 'event',
         component: PartyDetailsComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'party/:id/edit',
+        path: 'event/:id/edit',
         component: CreatePartyComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'party/:id/delete',
+        path: 'event/:id/delete',
         component: CreatePartyComponent,
         canActivate: [AuthGuard]
     }

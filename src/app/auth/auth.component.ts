@@ -29,7 +29,7 @@ export class AuthComponent implements OnInit {
       authFormSubs.subscribe((resposeData) => {
         if (resposeData) {
           // console.log('SignIn Success', resposeData);
-          this.router.navigate(['/party']);
+          this.router.navigate(['/event']);
         }
       }, errorMessage => {
         // console.log(errorMessage);
@@ -46,7 +46,7 @@ export class AuthComponent implements OnInit {
       authFormSubs.subscribe((resposeData) => {
         if (resposeData) {
           // console.log('SignUp Success', resposeData);
-          this.router.navigate(['/party']);
+          this.router.navigate(['/event']);
         }
       }, errorMessage => {
         this.errorMessage = errorMessage;

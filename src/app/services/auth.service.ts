@@ -59,7 +59,7 @@ export class AuthService {
             const user = JSON.parse(data);
             if (user) {
                 this.user.next(user);
-                this.router.navigate(['/party'])
+                this.router.navigate(['/event'])
             }
         } else {
             this.router.navigate(['/home']);

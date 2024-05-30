@@ -60,7 +60,7 @@ export class DatastoreService {
     }
 
     search(value: string) {
-        const filteredData = this.partyDetails.filter((x: any) => Object.values(x).join(";").includes(value));
+        const filteredData = this.partyDetails.filter((x: any) => Object.values(x).join(";").toLocaleLowerCase().includes(value));
         this.partyDetailsSubject.next(filteredData);
     }
 

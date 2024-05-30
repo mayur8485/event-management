@@ -13,6 +13,9 @@
                             minlength="6" formControlName="password">
                     </div>
                     <div class="d-flex justify-content-center align-items-center">
+                        <p style="font-size: 12px;">Password shoul have 1 Special, 1 Capital& Min 8 Char </p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center">
                         <p *ngIf="errorMessage" style="color: red;">{{errorMessage}}</p>
                     </div>
                     <div class="py-5 d-flex justify-content-around">

@@ -22,7 +22,7 @@ export class CreatePartyComponent implements OnInit, OnDestroy {
       id: new FormControl(""),
       fullName: new FormControl("", { validators: [Validators.required] }),
       address: new FormControl("", { validators: [Validators.required] }),
-      mobileNo: new FormControl("", { validators: [Validators.required, Validators.maxLength(10)] }),
+      mobileNo: new FormControl("", { validators: [Validators.required, Validators.pattern(/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/) ] }),
       description : new FormControl(""),
       date: new FormControl("", { validators: [Validators.required] }),
       time: new FormControl("", { validators: [Validators.required] })
@@ -66,7 +66,7 @@ export class CreatePartyComponent implements OnInit, OnDestroy {
       partyDetail.id = this.getRandomNumber();
       if (this.datastoreService.createPartyDetails(partyDetail)) {
         this.partyForm.reset();
-        this.router.navigate(['/party']);
+        this.router.navigate(['/event']);
       }
     }
   }
@@ -76,7 +76,7 @@ export class CreatePartyComponent implements OnInit, OnDestroy {
     if (this.partyForm.dirty) {
       const partyDetail = this.partyForm.getRawValue();
       this.datastoreService.updatePartyDetails(partyDetail);
-      this.router.navigate(['/party']);
+      this.router.navigate(['/event']);
     }
   }
 
@@ -84,11 +84,11 @@ export class CreatePartyComponent implements OnInit, OnDestroy {
     // console.log('Deleting the party details');
     const partyDetail = this.partyForm.getRawValue();
     this.datastoreService.deletePartyDetails(partyDetail);
-    this.router.navigate(['/party']);
+    this.router.navigate(['/event']);
   }
 
   onNavigate() {
-    this.router.navigate(['/party']);
+    this.router.navigate(['/event']);
   }
 
   ngOnDestroy(): void {
