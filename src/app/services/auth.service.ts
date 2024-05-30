@@ -120,7 +120,7 @@ export class AuthService {
                 errorMessage = 'Please use provided creds'
                 break;
             case 'EMAIL_EXISTS':
-                errorMessage = 'Email already exist'
+                errorMessage = 'Email already exists'
                 break;
         }
 
