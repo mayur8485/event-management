@@ -1,4 +1,8 @@
-# PartyManagementSystem
+# EventManagementSystem
+This is a basic demonstration of the angular application and its features like routing, auth-guards, HTTP clients, components, services, APIs etc
+
+This basic event management system allows you to create event details for yourself. All CRUD operations are provided over event data.
+The data is stored and fetched from Firebase (real-time database).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 

@@ -1,17 +1,17 @@
 <nav class="navbar sticky-top navbar-light p-3" style="background-color: #98a9d1;">
     <div class="container-fluid">
         <div class="navbar-header">
-            <span class="brand" style="cursor: pointer;" (click)="home()">Party Management System</span>
+            <span class="brand" style="cursor: pointer;" (click)="home()">Event Management System</span>
         </div>
         <ul class="nav" *ngIf="isAuthenticated">
             <li class="nav-item" role="button" routerLinkActive="active">
                 <a routerLink="/create">
-                    <p class="m-2">Create Party</p>
+                    <p class="m-2">Create Event</p>
                 </a>
             </li>
             <li class="nav-item" role="button" routerLinkActive="active">
                 <a class="d-flex flex-row" [routerLink]="['/party']">
-                    <p class="m-2">View Parties</p>
+                    <p class="m-2">View Events</p>
                 </a>
             </li>
             <li>

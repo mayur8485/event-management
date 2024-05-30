@@ -15,14 +15,14 @@ export class DatastoreService {
 
     storeData() {
         const data = this.partyDetails;
-        this.http.put('https://party-management-b6df4-default-rtdb.asia-southeast1.firebasedatabase.app/party.json',
+        this.http.put('https://event-management-81f60-default-rtdb.asia-southeast1.firebasedatabase.app/party.json',
             data).subscribe(response => {
                 // console.log(response);
             });
     }
 
     fetchData() {
-        this.http.get('https://party-management-b6df4-default-rtdb.asia-southeast1.firebasedatabase.app/party.json').subscribe((response: any) => {
+        this.http.get('https://event-management-81f60-default-rtdb.asia-southeast1.firebasedatabase.app/party.json').subscribe((response: any) => {
             if(response){
                 this.partyDetails = response;
                 this.partyDetailsSubject.next(this.partyDetails);

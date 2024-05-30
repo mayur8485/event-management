@@ -29,7 +29,7 @@
     
                 <div class="form-group col-md-12 my-3 d-flex flex-row">
                     <label for="date" style="width: 300px;align-self: center;">Date</label>
-                    <input type="date" class="form-control" id="date" placeholder="Enter party date" formControlName="date" [min]="getTodaysDate()">
+                    <input type="date" class="form-control" id="date" placeholder="Enter Event date" formControlName="date" [min]="getTodaysDate()">
                 </div>
                 <div class="form-group col-md-12 my-3 d-flex flex-row">
                     <label for="time" style="width: 300px;align-self: center;">Time</label>
@@ -37,11 +37,11 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center align-items-center my-5">
-                <button type="submit" *ngIf="mode==='create'" class="btn btn-primary">Create Party</button>
+                <button type="submit" *ngIf="mode==='create'" class="btn btn-primary">Create Event</button>
                 <span>&nbsp;</span>
                 <button type="button" *ngIf="mode==='edit' || mode==='delete'" class="btn btn-primary" (click)="onNavigate()">Back</button>
                 <span>&nbsp;</span>
-                <button type="button" *ngIf="mode==='edit'" class="btn btn-primary" (click)="onUpdatePartyDetails()">Update Party Details</button>
+                <button type="button" *ngIf="mode==='edit'" class="btn btn-primary" (click)="onUpdatePartyDetails()">Update Event Details</button>
                 <span>&nbsp;</span>
                 <button type="button" *ngIf="mode==='delete'" class="btn btn-danger" (click)="onDeletePartyDetails()">Are you sure you want to delete</button>
             </div>
